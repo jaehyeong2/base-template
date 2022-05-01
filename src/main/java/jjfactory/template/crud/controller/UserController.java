@@ -42,10 +42,10 @@ public class UserController {
         return new ApiRes<>(userService.save(dto));
     }
 
-//    @DeleteMapping("/users/{id}")
-//    public ApiRes<?> delete(@PathVariable Long id){
-//        return new ApiRes<>(userService.delete(id));
-//    }
+    @DeleteMapping("/users/{id}")
+    public ApiRes<?> delete(@PathVariable Long id){
+        return new ApiRes<>(userService.delete(id),"삭제 완료");
+    }
 
 //    @PutMapping("/users/{id}")
 //    public ApiRes<?> changeName(@PathVariable Long id, @RequestBody UserDto dto){

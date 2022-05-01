@@ -9,4 +9,13 @@ import lombok.NoArgsConstructor;
 @Getter
 public class ApiRes<T> {
     T data;
+    String message;
+
+    public ApiRes(T data) {
+        this.data = data;
+    }
+
+    public ApiRes(String message) {
+        this.message = message;
+    }
 }
